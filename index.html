@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <div id="app">
+        <div v-for="slide in slides" class="container">
+            <div class="card">
+                <img :src="slides[activeImage].image" alt="" :class="{ active:isActive }">
+                <div class="card-body">
+                    <h4 class="card-title">{{slide.title}}</h4>
+                    <p class="text">{{slide.text}}.</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="prev" @click="prev()"> PRIMA</button>
+                <button class="next" @click="next()"> DOPO</button>
+
+
+            </div>
+            <div class="thumbs">
+                <img src="./img/01.webp" width="100" alt="" :class="{ active:isActive }">
+                <img src="./img/02.webp" width="100" alt="" :class="{ active:isActive }">
+                <img src="./img/03.webp" width="100" alt="" :class="{ active:isActive }">
+                <img src="./img/04.webp" width="100" alt="" :class="{ active:isActive }">
+                <img src="./img/05.webp" width="100" alt="" :class="{ active:isActive }">
+            </div>
+        </div>
+
+    </div>
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
