@@ -16,8 +16,8 @@
             <div class="card">
                 <img :src="slides[activeImage].image" alt="" :class="{ active:isActive }">
                 <div class="card-body">
-                    <h4 class="card-title">{{slide.title}}</h4>
-                    <p class="text">{{slide.text}}.</p>
+                    <h4 class="card-title">{{slides[activeImage].title}}</h4>
+                    <p class="text">{{slides[activeImage].text}}.</p>
                 </div>
             </div>
             <div class="controls">
