@@ -12,7 +12,7 @@
 <body>
 
     <div id="app">
-        <div v-for="slide in slides" class="container">
+        <div v-for="slide" class="container">
             <div class="card">
                 <img :src="slides[activeImage].image" alt="" :class="{ active:isActive }">
                 <div class="card-body">
