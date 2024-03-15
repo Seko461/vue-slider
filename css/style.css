@@ -82,6 +82,7 @@ img:not(.active) {
 
 .thumbs>img {
     opacity: 20%;
+    cursor: pointer;
 }
 
 .opacity.active {

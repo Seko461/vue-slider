@@ -1,5 +1,4 @@
 
-
 const slides = [
     {
         image: 'img/01.webp',
@@ -82,9 +81,19 @@ createApp({
                 this.activeImage = 0;
             }
 
+        },
+
+        setInterval() {
+
+
         }
+
+
     }
 
 }).mount('#app')
+
+
+
 
 

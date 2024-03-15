@@ -23,7 +23,8 @@
             </div>
             <div class="thumbs">
                 <img :src="slide.image" class="active" :class="[index === activeImage ? 'opacity' : '']" width=" 100"
-                    alt="" v-for="(slide, index) in slides">
+                    alt="" v-for="(slide, index) in slides" @click="activeImage = index">
+
 
 
             </div>
