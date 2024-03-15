@@ -5,38 +5,58 @@
 }
 
 body {
-    background-color: #6a6a6a;
+    display: flex;
+    justify-content: center;
+    padding-top: 8rem;
+    background: linear-gradient(to right, #2c5364, #0f2027);
 }
 
 .container {
-    height: 100vh;
+    width: 80%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
+
 
 .card {
-    background-color: white;
-    height: 700px;
+    height: 30rem;
+    width: 60rem;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: relative;
+    transform: translateX(10rem);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-
-
+    -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
 }
+
 
 .card>img {
-    border-top-left-radius: 2rem;
-
-    width: 400px;
-
-    margin: auto;
-
-
+    height: 100%;
+    object-fit: contain;
+    max-width: 40rem;
 }
+
+.card-body {
+    position: absolute;
+    top: -5rem;
+    left: 13rem;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 
 h4,
 p {
     text-align: center;
+    color: white;
 }
 
 .thumbs {
@@ -44,12 +64,14 @@ p {
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 700px;
+    height: 30rem;
     align-items: center;
     justify-content: space-between;
     padding: .5rem;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    transform: translateX(8rem);
+    -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
 }
 
 
@@ -67,4 +89,29 @@ img:not(.active) {
     border: 1px solid white;
     transform: scale(1.1);
     border-radius: 10px;
+}
+
+.controls {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    transform: translateY(-18rem);
+}
+
+.prev {
+    transform: translateX(3rem);
+}
+
+.prev,
+.next {
+    font-size: 2rem;
+    background-color: none;
+    cursor: pointer;
+    -webkit-box-reflect: below 28rem linear-gradient(transparent, #0004);
+}
+
+.prev:hover,
+.next:hover {
+    color: rgb(84, 84, 84);
 }

@@ -58,7 +58,7 @@ createApp({
                 }
             ],
             isActive: true,
-            opacity: true,
+            isopacity: true,
 
 
         }

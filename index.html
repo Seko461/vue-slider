@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/f54afad4a3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,14 +22,15 @@
                 </div>
             </div>
             <div class="thumbs">
-                <img :src="slide.image" class="active opacity" width="100" alt="" v-for="(slide, index) in slides">
+                <img :src="slide.image" class="active" :class="[index === activeImage ? 'opacity' : '']" width=" 100"
+                    alt="" v-for="(slide, index) in slides">
 
 
             </div>
-            <div class="controls">
-                <button class="prev" @click="prev()" :class="opacity"> PRIMA</button>
-                <button class="next" @click="next()" :class="opacity"> DOPO</button>
-            </div>
+        </div>
+        <div class="controls">
+            <div class="prev" @click="prev()" :class="opacity"> <i class="fa-solid fa-circle-chevron-left"></i></div>
+            <div class="next" @click="next()" :class="opacity"> <i class="fa-solid fa-circle-chevron-right"></i></div>
         </div>
 
     </div>
