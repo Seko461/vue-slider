@@ -52,8 +52,19 @@ p {
     border-bottom-right-radius: 2rem;
 }
 
-.controls {}
+
 
 img:not(.active) {
     display: none;
+}
+
+.thumbs>img {
+    opacity: 20%;
+}
+
+.opacity.active {
+    opacity: 1;
+    border: 1px solid white;
+    transform: scale(1.1);
+    border-radius: 10px;
 }

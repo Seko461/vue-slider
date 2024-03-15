@@ -20,18 +20,14 @@
                     <p class="text">{{slides[activeImage].text}}.</p>
                 </div>
             </div>
-            <div class="controls">
-                <button class="prev" @click="prev()"> PRIMA</button>
-                <button class="next" @click="next()"> DOPO</button>
+            <div class="thumbs">
+                <img :src="slide.image" class="active opacity" width="100" alt="" v-for="(slide, index) in slides">
 
 
             </div>
-            <div class="thumbs">
-                <img src="./img/01.webp" width="100" alt="" :class="{ active:isActive }">
-                <img src="./img/02.webp" width="100" alt="" :class="{ active:isActive }">
-                <img src="./img/03.webp" width="100" alt="" :class="{ active:isActive }">
-                <img src="./img/04.webp" width="100" alt="" :class="{ active:isActive }">
-                <img src="./img/05.webp" width="100" alt="" :class="{ active:isActive }">
+            <div class="controls">
+                <button class="prev" @click="prev()" :class="opacity"> PRIMA</button>
+                <button class="next" @click="next()" :class="opacity"> DOPO</button>
             </div>
         </div>
 

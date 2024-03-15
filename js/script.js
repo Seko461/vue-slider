@@ -33,6 +33,7 @@ createApp({
     data() {
         return {
             activeImage: 0,
+
             slides: [
                 {
                     image: 'img/01.webp',
@@ -57,21 +58,27 @@ createApp({
                 }
             ],
             isActive: true,
+            opacity: true,
+
+
         }
     },
     methods: {
         prev() {
             console.log('prev');
             this.activeImage--
+
             if (this.activeImage < 0) {
-                this.activeImage = this.slides.length - 1
+                this.activeImage = this.slides.length
             }
+
 
         },
         next() {
             console.log('next');
             this.activeImage++
-            if (this.activeImage === this.slides.length - 1) {
+
+            if (this.activeImage === this.slides.length) {
                 this.activeImage = 0;
             }
 
